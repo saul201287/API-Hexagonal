@@ -1,5 +1,5 @@
-import { Supplier } from "../../domain/Supplier";
-import { SupplierRepository } from "../../domain/SupplierRepository";
+import { Supplier } from "../../domain/entities/Supplier";
+import { SupplierRepository } from "../../domain/repository/SupplierRepository";
 
 export class CreateSupplierUseCase {
   constructor(readonly supplierRepository: SupplierRepository) {}

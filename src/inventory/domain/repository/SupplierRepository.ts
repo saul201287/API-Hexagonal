@@ -1,4 +1,4 @@
-import { Supplier } from "./Supplier";
+import { Supplier } from "../entities/Supplier";
 
 export interface SupplierRepository {
   getAll(): Promise<Supplier[] | null>;
