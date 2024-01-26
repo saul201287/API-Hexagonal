@@ -3,8 +3,8 @@ import morgan from "morgan";
 import { Signale } from "signale";
 import * as dotenv from "dotenv";
 
-import { supplierRouter } from "./inventory/infraestructura/routes/SupplierRouter";
-import { productRouter } from "./inventory/infraestructura/routes/ProductRouter";
+import { supplierRouter } from "./supplier/infraestructura/SupplierRouter";
+import { productRouter } from "./products/infreaestructura/ProductRouter";
 
 const app = express();
 dotenv.config();

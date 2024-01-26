@@ -1,7 +1,6 @@
 import express from "express";
 
-import { createSupplierController } from "../DepenciesSupplier";
-import { getAllSupplierController } from "../DepenciesSupplier";
+import { createSupplierController, getAllSupplierController } from "./DepenciesSupplier";
 
 export const supplierRouter = express.Router();
 

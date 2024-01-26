@@ -1,5 +1,5 @@
-import { Product } from "../../domain/entities/Product";
-import { ProductRepository } from "../../domain/interface/ProductRepository";
+import { Product } from "../domain/Product";
+import { ProductRepository } from "../domain/ProductRepository";
 
 export class CreateProductUseCase {
   constructor(readonly productRepository: ProductRepository) {}

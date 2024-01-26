@@ -1,6 +1,6 @@
-import { query } from "../../../database/mysql";
-import { Supplier } from "../../domain/entities/Supplier";
-import { SupplierRepository } from "../../domain/interface/SupplierRepository";
+import { query } from "../../database/mysql";
+import { Supplier } from "../domain/Supplier";
+import { SupplierRepository } from "../domain/SupplierRepository";
 
 export class MysqlSupplierRepository implements SupplierRepository {
   async getAll(): Promise<Supplier[] | null> {

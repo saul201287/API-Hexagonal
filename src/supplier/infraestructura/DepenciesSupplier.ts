@@ -1,8 +1,8 @@
-import { CreateSupplierUseCase } from "../app/MethodsSupplier/CreateSupplierUseCase";
-import { GetAllSupplierUseCase } from "../app/MethodsSupplier/GetAllSupplierUseCase";
+import { CreateSupplierUseCase } from "../app/CreateSupplierUseCase";
+import { GetAllSupplierUseCase } from "../app/GetAllSupplierUseCase";
 import { CreateSupplierController } from "./controllers/CreateSupplierController";
 import { GetAllSupplierController } from "./controllers/GetAllSupplierController";
-import { MysqlSupplierRepository } from "./repository/MysqlSupplierRepository";
+import { MysqlSupplierRepository } from "./MysqlSupplierRepository";
 
 export const mysqlSupplierRepository = new MysqlSupplierRepository();
 

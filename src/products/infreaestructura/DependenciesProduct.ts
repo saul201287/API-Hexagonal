@@ -1,8 +1,8 @@
-import { CreateProductUseCase } from "../app/MethodsProducts/CreateProductUseCase";
-import { GetAllProductUseCase } from "../app/MethodsProducts/GetAllProductsUseCase";
+import { CreateProductUseCase } from "../app/CreateProductUseCase";
+import { GetAllProductUseCase } from "../app/GetAllProductsUseCase";
 import { CreateProductController } from "./controllers/CreateProductController";
 import { GetAllProductController } from "./controllers/GetAllProductContoller";
-import { MysqlProductRepository } from "./repository/MysqlProductRepository";
+import { MysqlProductRepository } from "./MysqlProductRepository";
 
 export const mysqlProductRepository = new MysqlProductRepository();
 

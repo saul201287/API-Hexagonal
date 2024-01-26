@@ -1,7 +1,6 @@
 import express from "express";
 
-import { createProductController } from "../DependenciesProduct";
-import { getAllProductController } from "../DependenciesProduct";
+import { createProductController, getAllProductController } from "./DependenciesProduct";
 
 export const productRouter = express.Router();
 

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateSupplierUseCase } from "../../app/MethodsSupplier/CreateSupplierUseCase";
+import { CreateSupplierUseCase } from "../../app/CreateSupplierUseCase";
 
 export class CreateSupplierController {
   constructor(readonly createSupplierUseCase: CreateSupplierUseCase) {}

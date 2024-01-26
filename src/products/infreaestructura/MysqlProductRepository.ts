@@ -1,10 +1,11 @@
-import { query } from "../../../database/mysql";
-import { Product } from "../../domain/entities/Product";
-import { ProductRepository } from "../../domain/interface/ProductRepository";
+import { query } from "../../database/mysql";
+import { Product } from "../domain/Product";
+import { ProductRepository } from "../domain/ProductRepository";
 
 export class MysqlProductRepository implements ProductRepository {
   async getAll(): Promise<Product[] | null> {
-    const sql = "SELECT * FROM productos";
+    const sql =
+      "SELECT productos.id, productos.nombre, productos.precio , productos.cantidad, proveedor.marca AS proveedor FROM productos INNER JOIN proveedor ON productos.proveedor = proveedor.id;";
     try {
       const [data]: any = await query(sql, []);
       const dataProducts = Object.values(JSON.parse(JSON.stringify(data)));
@@ -25,7 +26,7 @@ export class MysqlProductRepository implements ProductRepository {
   }
 
   async createProduct(
-    nombre:string,
+    nombre: string,
     precio: number,
     cantidad: number,
     proveedor: number

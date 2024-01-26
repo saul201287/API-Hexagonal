@@ -1,5 +1,5 @@
-import { Supplier } from "../../domain/entities/Supplier";
-import { SupplierRepository } from "../../domain/interface/SupplierRepository";
+import { Supplier } from "../domain/Supplier";
+import { SupplierRepository } from "../domain/SupplierRepository";
 
 export class GetAllSupplierUseCase {
   constructor(readonly supplierRepository: SupplierRepository) {}
