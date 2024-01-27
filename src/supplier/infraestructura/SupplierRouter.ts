@@ -5,11 +5,19 @@ import { createSupplierController, getAllSupplierController } from "./DepenciesS
 export const supplierRouter = express.Router();
 
 supplierRouter.get(
-  "/",
-  getAllSupplierController.run.bind(getAllSupplierController)
-);
+  "/",(req, res) => {getAllSupplierController.run(req,res).then(() => {
+    return null;
+  }).catch((error) => {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
+  })
+});
 
 supplierRouter.post(
-  "/",
-  createSupplierController.run.bind(createSupplierController)
-);
+  "/",(req, res) => {createSupplierController.run(req,res).then(() => {
+    return null;
+  }).catch((error) => {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
+  })
+});

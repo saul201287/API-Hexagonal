@@ -5,11 +5,18 @@ import { createProductController, getAllProductController } from "./Dependencies
 export const productRouter = express.Router();
 
 productRouter.get(
-  "/",
-  getAllProductController.run.bind(getAllProductController)
-);
-
+  "/",(req, res) => {getAllProductController.run(req,res).then(() => {
+    return null;
+  }).catch((error) => {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
+  })
+});
 productRouter.post(
-  "/",
-  createProductController.run.bind(createProductController)
-);
+  "/",(req, res) => {createProductController.run(req,res).then(() => {
+    return null;
+  }).catch((error) => {
+    console.error(error);
+    res.status(500).send('Error en el servidor');
+  })
+});
